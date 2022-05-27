@@ -1,0 +1,28 @@
+<?php
+namespace MyApp\Model;
+use MyApp\Storage\StockStorage;
+use JetBrains\PhpStorm\Pure;
+
+class VirtualProduct extends Product
+{
+    private bool $isSubscription;
+
+    #[Pure] public function __construct(int $id, string $name, Brand $brand, int $price, bool $isSubscription)
+    {
+        parent::__construct($id, $name, $brand, $price);
+        $this->isSubscription = $isSubscription;
+    }
+
+
+    public function isSubscription(): bool
+    {
+        return $this->isSubscription;
+    }
+
+    public function isAvailable(): bool
+    {
+        return true;
+
+    }
+
+}
