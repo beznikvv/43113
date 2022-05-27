@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cat index{% endblock %}
+
+{% block body %}
+    <h1 class="cat-index">Cat index</h1>
+
+
+    <img class="cat-gif" src="https://cataas.com/cat/gif" alt="cat gif">
+
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>IsAdoptable</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for cat in cats %}
+            <tr>
+                <td>{{ cat.id }}</td>
+                <td>{{ cat.name }}</td>
+                <td>{{ cat.age }}</td>
+                <td>{{ cat.isAdoptable ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('app_cat_show', {'id': cat.id}) }}" class="btn btn-secondary btn-sm">show</a>
+                    <a href="{{ path('app_cat_edit', {'id': cat.id}) }}" class="btn btn-secondary btn-sm">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="low-button">
+        <a href="{{ path('app_cat_new') }}" class="btn btn-secondary btn-lg btn-block">Create new</a>
+    </div>
+    <div class="low-button">
+        <a href="{{ path('app_cat_adoptable') }} " class="btn btn-secondary btn-lg btn-block">Check available cats!</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+@import "bootstrap";
+
+body {
+    background-color: lightgray;
+}
+
+.cat-gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+
+.cat-index {
+    text-align: center;
+}
+
+.low-button {
+    display: inline-block;
+    padding-left: 5%;
+    padding-top: 2%;
+    width: 30%;
+}
+.small-btn {
+    display: inline-block;
+    padding-left: 1%;
+    padding-top: 0.1%;
+    width: 10%;
+}
