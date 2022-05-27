@@ -1,0 +1,30 @@
+{
+  "name": "dsw/cw5",
+  "description": "Moj projekt - cwiczenia 5",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Bartlomiej Beznic",
+      "email": "dsw43113@studeent.dsw.edu.pl"
+    }
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "MyApp\\": "src/"
+    }
+  },
+
+
+
+  "require": {
+    "squizlabs/php_codesniffer": "3.6.2",
+    "nubs/random-name-generator": "^2.2"
+
+  }
+  ,
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  }
+}
